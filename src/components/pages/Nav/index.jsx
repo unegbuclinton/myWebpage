@@ -118,7 +118,7 @@ const NavWrapper = styled.div`
   position: sticky;
   top: 0;
   width: 100%;
-  height: 4rem;
+  height: 5rem;
   padding: 1.5rem;
   background: ${({ navbar }) => (navbar ? COLORS.ivory : "transparent")};
   transition: all 0.3s ease-in-out;
@@ -150,7 +150,7 @@ const NavContainer = styled.div`
 `;
 const NavMenu = styled.div`
   display: none;
-  
+
   @media screen and (min-width: 1100px) {
     display: flex;
     align-items: center;

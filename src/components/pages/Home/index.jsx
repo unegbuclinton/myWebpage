@@ -73,7 +73,8 @@ function HomePage() {
         <HomeIntro>
           <p>
             Couple of while later I began to build interesting projects using
-            <span> React.</span> I have also Interned with Curacel. This is me.
+            <span> React.</span> I have also Interned with Curacel. <br />
+            This is me.
             <span>( )</span>
           </p>
         </HomeIntro>
@@ -87,7 +88,7 @@ export default HomePage;
 const HomePageSection = styled.div`
   .animation-container {
     position: absolute;
-    left: 7rem;
+    left: 11rem;
 
     .home-circle {
       position: relative;
