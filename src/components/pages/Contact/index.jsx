@@ -104,6 +104,7 @@ function Contact() {
 export default Contact;
 
 const ContactSection = styled.div`
+  overflow: hidden;
   margin: 0 2rem 0 calc(2rem + 1px);
   padding: 10.4rem 0 0;
 
