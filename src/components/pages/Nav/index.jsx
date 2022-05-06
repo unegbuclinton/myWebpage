@@ -36,7 +36,7 @@ function NavHeader() {
         </div>
 
         <NavMenu navbar={navbar}>
-          <Link to="/home" onClick={toggleCloseHamburger}>
+          <Link to="/" onClick={toggleCloseHamburger}>
             .clinton()
           </Link>
           <Link to="/work" onClick={toggleCloseHamburger}>
@@ -76,7 +76,7 @@ function NavHeader() {
       </NavContainer>
 
       <StyledMenu open={open}>
-        <Link to="/home" onClick={toggleCloseHamburger}>
+        <Link to="/" onClick={toggleCloseHamburger}>
           clinton();
         </Link>
         <Link to="/work" onClick={toggleCloseHamburger}>
@@ -149,32 +149,36 @@ const NavContainer = styled.div`
   }
 `;
 const NavMenu = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  z-index: 10;
-  margin-top: -1.5rem;
-
-  a {
-    font-size: ${FONTSIZES.xsmall};
-    text-transform: uppercase;
-    padding: 2rem 0;
-    font-weight: bold;
-    letter-spacing: 0.5rem;
-    color: ${({ navbar }) => (navbar ? COLORS["dark-purple"] : COLORS.ivory)};
-    text-decoration: none;
-    transition: color 0.3s linear;
-
-    &:hover {
-      color: ${COLORS["dark-slay-gray"]};
-    }
-  }
-  .media-icons {
+  display: none;
+  
+  @media screen and (min-width: 1100px) {
     display: flex;
-    gap: 1.6rem;
-    margin-top: 0.5rem;
-    .media-icon {
-      font-size: ${FONTSIZES.small};
+    align-items: center;
+    gap: 1.2rem;
+    z-index: 10;
+    margin-top: -1.5rem;
+
+    a {
+      font-size: ${FONTSIZES.xsmall};
+      text-transform: uppercase;
+      padding: 2rem 0;
+      font-weight: bold;
+      letter-spacing: 0.5rem;
+      color: ${({ navbar }) => (navbar ? COLORS["dark-purple"] : COLORS.ivory)};
+      text-decoration: none;
+      transition: color 0.3s linear;
+
+      &:hover {
+        color: ${COLORS["dark-slay-gray"]};
+      }
+    }
+    .media-icons {
+      display: flex;
+      gap: 1.6rem;
+      margin-top: 0.5rem;
+      .media-icon {
+        font-size: ${FONTSIZES.small};
+      }
     }
   }
 `;
