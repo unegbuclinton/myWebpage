@@ -133,6 +133,7 @@ const HomePageSection = styled.div`
         font-size: ${FONTSIZES.xlarge};
         font-weight: ${FONTWEIGHTS.bold};
         color: ${{ COLORS }};
+        word-break: break-word;
         text-align: center;
       }
     }

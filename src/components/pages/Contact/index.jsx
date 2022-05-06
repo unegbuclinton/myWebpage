@@ -105,7 +105,7 @@ export default Contact;
 
 const ContactSection = styled.div`
   margin: 0 2rem 0 calc(2rem + 1px);
-  padding: 18.4rem 0 0;
+  padding: 10.4rem 0 0;
 
   .contact-header {
     h1 {

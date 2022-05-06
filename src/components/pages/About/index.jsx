@@ -126,6 +126,8 @@ function AboutPage() {
 export default AboutPage;
 
 const AboutWrapper = styled.div`
+  overflow: hidden;
+
   &::before {
     content: "";
     width: 100%;
