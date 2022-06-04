@@ -1,17 +1,14 @@
-
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import AboutPage from "./components/pages/About";
-import Contact from "./components/pages/Contact";
-import HomePage from "./components/pages/Home";
-import NavHeader from "./components/pages/Nav";
-import WorkPage from "./components/pages/Work";
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AboutPage from './components/pages/About';
+import Contact from './components/pages/Contact';
+import HomePage from './components/pages/Home';
+import NavHeader from './components/pages/Nav';
+import WorkPage from './components/pages/Work';
 
 const App = () => {
   return (
-
     <>
-      <Router>
+      {/* <Router>
         <NavHeader />
         <Routes>
           <Route path='/' element={<HomePage />} />
@@ -20,13 +17,16 @@ const App = () => {
           <Route path='/about' element={<AboutPage />} />
 
         </Routes>
+      </Router> */}
+      <Router>
+        <NavHeader />
+        <HomePage />
+        <WorkPage />
+        <AboutPage />
+        <Contact />
       </Router>
     </>
-
-
-
-
-  )
-}
+  );
+};
 
 export default App;

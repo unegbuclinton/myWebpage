@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import styled from "styled-components";
-import { COLORS } from "../../../constants/colors";
-import { FONTSIZES, FONTWEIGHTS } from "../../../constants/fonts";
-import Button from "../../atoms/Button";
-import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
-import emailjs from "emailjs-com";
-import Aos from "aos";
-import "aos/dist/aos.css";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import emailjs from 'emailjs-com';
+import React, { useEffect } from 'react';
+import { AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
+import styled from 'styled-components';
+import { COLORS } from '../../../constants/colors';
+import { FONTSIZES, FONTWEIGHTS } from '../../../constants/fonts';
+import Button from '../../atoms/Button';
 
 function Contact() {
   useEffect(() => {
@@ -17,17 +17,17 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_o49p91f",
-        "template_vk4nnxf",
+        'service_o49p91f',
+        'template_vk4nnxf',
         e.target,
-        "SEDXk114_MP97sFbM"
+        'SEDXk114_MP97sFbM'
       )
       .then(
         (result) => {
-          console.log(result.text);
+          return result;
         },
         (error) => {
-          console.log(error.text);
+          return error;
         }
       );
 
@@ -35,6 +35,9 @@ function Contact() {
   };
   return (
     <ContactSection>
+      <div data-aos="fade-up" className="contact-header">
+        {/* Contact.<span>me( )</span> */}
+      </div>
       <div
         data-aos="fade-down"
         data-aos-duration="1000"
@@ -44,37 +47,38 @@ function Contact() {
         <h2> Get In Touch</h2>
       </div>
 
-      <ContactAction
-        data-aos="fade-left"
-        data-aos-anchor="#example-anchor"
-        data-aos-offset="500"
-        data-aos-duration="1500"
-      >
-        <span className="contact-action__icon">
-          <AiOutlinePhone />
-        </span>
-        <div className="contact-action__details">
-          <h1>Call Me</h1>
-          <a href="tel:08030905388">08030905388</a>
-        </div>
-      </ContactAction>
-
-      <ContactAction
-        data-aos="fade-left"
-        data-aos-anchor="#example-anchor"
-        data-aos-offset="500"
-        data-aos-duration="2000"
-      >
-        <span className="contact-action__icon">
-          <AiOutlineMail />
-        </span>
-        <div className="contact-action__details">
-          <h1> Email</h1>
-          <a href="mailto:unegbuclinton5@gmail.com">unegbuclinton5@gmail.com</a>
-        </div>
-      </ContactAction>
-
       <ContactForm onSubmit={emailSubmit}>
+        <ContactAction
+          data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="1500"
+        >
+          <span className="contact-action__icon">
+            <AiOutlinePhone />
+          </span>
+          <div className="contact-action__details">
+            {/* <h1>Call Me</h1> */}
+            <a href="tel:08030905388">08030905388</a>
+          </div>
+        </ContactAction>
+
+        <ContactAction
+          data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="2000"
+        >
+          <span className="contact-action__icon">
+            <AiOutlineMail />
+          </span>
+          <div className="contact-action__details">
+            {/* <h1> Email</h1> */}
+            <a href="mailto:unegbuclinton5@gmail.com">
+              unegbuclinton5@gmail.com
+            </a>
+          </div>
+        </ContactAction>
         <ContactInput
           data-aos="fade-right"
           data-aos-anchor="#example-anchor"
@@ -104,24 +108,27 @@ function Contact() {
 export default Contact;
 
 const ContactSection = styled.div`
-  overflow: hidden;
-  margin: 0 2rem 0 calc(2rem + 1px);
-  padding: 10.4rem 0 0;
+  /* overflow: hidden; */
+  margin: 0 2rem 10rem calc(2rem + 1px);
 
   .contact-header {
+    font-size: ${FONTSIZES.xxlarge};
+    font-weight: ${FONTWEIGHTS.bold};
+    color: ${COLORS['ivory']};
+    margin: 5rem 0;
     h1 {
       text-align: center;
       font-size: ${FONTSIZES.xlarge};
       font-weight: ${FONTWEIGHTS.medium};
       margin-bottom: 0.5rem;
-      color: ${COLORS["pewter-blue"]};
+      color: ${COLORS['pewter-blue']};
     }
     h2 {
       text-align: center;
       font-size: ${FONTSIZES.small};
       font-weight: ${FONTWEIGHTS.normal};
       margin-bottom: 5rem;
-      color: ${COLORS["pewter-blue"]};
+      color: ${COLORS['pewter-blue']};
     }
   }
   .contact-btn {
@@ -132,7 +139,7 @@ const ContactSection = styled.div`
   }
 
   @media only screen and (min-width: 768px) {
-    margin: 0 2rem 0 calc(6rem + 1px);
+    margin: 15rem 2rem 0 calc(6rem + 1px);
     .contact-header {
       h1 {
         font-size: ${FONTSIZES.xxlarge};
@@ -158,25 +165,25 @@ const ContactAction = styled.div`
   }
   h1 {
     font-size: ${FONTSIZES.xsmall};
-    color: ${COLORS["pewter-blue"]};
+    color: ${COLORS['pewter-blue']};
     margin-bottom: 0.5rem;
   }
   a {
     font-size: ${FONTSIZES.small};
     text-decoration: none;
-    color: ${COLORS["pewter-blue"]};
+    color: ${COLORS['pewter-blue']};
   }
 
   @media only screen and (min-width: 768px) {
     h1 {
       font-size: ${FONTSIZES.xlarge};
-      color: ${COLORS["pewter-blue"]};
+      color: ${COLORS['pewter-blue']};
       margin-bottom: 0.5rem;
     }
     a {
       font-size: ${FONTSIZES.xxlarge};
       text-decoration: none;
-      color: ${COLORS["pewter-blue"]};
+      color: ${COLORS['pewter-blue']};
     }
   }
 `;
@@ -184,6 +191,10 @@ const ContactAction = styled.div`
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
+
+  @media only screen and (min-width: 768px) {
+    align-items: center;
+  }
 `;
 const ContactInput = styled.input`
   width: 20rem;
@@ -192,7 +203,7 @@ const ContactInput = styled.input`
   border: none;
   border-radius: 3px;
   color: ${COLORS.white};
-  background: ${COLORS["light-purple"]};
+  background: ${COLORS['light-purple']};
   padding: 1.5rem;
   margin-bottom: 2rem;
 
@@ -212,7 +223,7 @@ const ContactTextArea = styled.textarea`
   margin-bottom: 2rem;
   padding: 1.5rem;
   color: ${COLORS.white};
-  background: ${COLORS["light-purple"]};
+  background: ${COLORS['light-purple']};
 
   @media only screen and (min-width: 768px) {
     width: 40rem;
