@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components";
-import { COLORS } from "./constants/colors";
+import { createGlobalStyle } from 'styled-components';
+import { COLORS } from './constants/colors';
 
 const GlobalStyles = createGlobalStyle`
     
@@ -16,7 +16,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background: ${COLORS["dark-purple"]};
+        background: ${COLORS['dark-purple']};
         color: inherit;
 
         span {
@@ -25,14 +25,15 @@ const GlobalStyles = createGlobalStyle`
   
     }
     ::-webkit-scrollbar-thumb {
-        background: ${COLORS["grey-200"]};
+        background: ${COLORS['light-slay-gray']};
         border-radius: 20px;
     }
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 5px;
+        height:5px;
     }
     ::-webkit-scrollbar-track {
-        background: ${COLORS["grey-600"]};
+        background: ${COLORS['ash-grey']};
     }
 `;
 
