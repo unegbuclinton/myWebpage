@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
@@ -12,10 +12,9 @@ import {
   DPIconWorks,
 } from '../../Icons';
 
-function NavHeader() {
+function NavHeader({ clinton, work, contact, about }) {
   const [navbar, setNavbar] = useState(false);
   const [activeTab, setActiveTab] = useState(0);
-  console.log(activeTab);
 
   const ChangeNavbar = () => {
     if (window.scrollY >= 90) {
@@ -27,16 +26,40 @@ function NavHeader() {
 
   window.addEventListener('scroll', ChangeNavbar);
 
+  // const scrollToSection = (elementRef) => {
+  //   window.scrollTo({
+  //     top: elementRef.current.offsetTop,
+  //     behavior: 'smooth',
+  //   });
+  // };
+
   const buttons = [
-    { name: 'Clinton', icon: <DPIconProfile /> },
-    { name: 'Work', icon: <DPIconWorks /> },
-    { name: 'About', icon: <DPIconAbout /> },
-    { name: 'Contact', icon: <DPIconContact /> },
+    {
+      name: 'Clinton',
+      icon: <DPIconProfile className="dpi-icon" />,
+      // onClick: () => scrollToSection(clinton),
+    },
+    {
+      name: 'Work',
+      icon: <DPIconWorks className="dpi-icon" />,
+      // onClick: () => scrollToSection(work),
+    },
+    {
+      name: 'About',
+      icon: <DPIconAbout className="dpi-icon" />,
+      // onClick: () => scrollToSection(about),
+    },
+    {
+      name: 'Contact',
+      icon: <DPIconContact className="dpi-icon" />,
+      // onClick: () => scrollToSection(contact),
+    },
   ];
+
   return (
     <NavWrapper navbar={navbar}>
       <MobileNavItems>
-        {buttons.map(({ name, icon }, index) => (
+        {buttons.map(({ name, icon, onClick }, index) => (
           <MobileTab
             key={index}
             className="mobile-nav__btn"
@@ -149,6 +172,11 @@ const MobileTab = styled.button`
   border: none;
   font-size: ${FONTSIZES.small};
 
+  .dpi-icon {
+    fill {
+      color: ${COLORS.white};
+    }
+  }
   ${({ active }) =>
     active &&
     css`
