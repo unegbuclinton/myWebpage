@@ -291,7 +291,7 @@ const HomeSection = styled.div`
     }
 
     .secondary-text {
-      font-size: ${FONTSIZES.xlarge};
+      font-size: ${FONTSIZES.xxlarge};
       font-weight: ${FONTWEIGHTS.medium};
       color: ${COLORS['ivory']};
       margin-bottom: 1.1rem;

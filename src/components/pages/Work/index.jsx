@@ -55,7 +55,7 @@ const WorkWrapper = styled.section`
 
   .work-header {
     color: ${COLORS.ivory};
-    font-size: ${FONTSIZES.xlarge};
+    font-size: ${FONTSIZES.xxlarge};
     font-weight: ${FONTWEIGHTS.bold};
     margin-bottom: 5rem;
 
