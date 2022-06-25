@@ -25,6 +25,7 @@ function WorkPage() {
               className="cta-btn"
               href="https://smartbank.netlify.app/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Demo
             </a>
@@ -34,6 +35,7 @@ function WorkPage() {
               className="cta-btn"
               href="https://github.com/unegbuclinton/Web-communication"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Github
             </a>
@@ -52,6 +54,7 @@ function WorkPage() {
               className="cta-btn"
               href="https://ccart.netlify.app/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Demo
             </a>
@@ -61,6 +64,7 @@ function WorkPage() {
               className="cta-btn"
               href="https://github.com/unegbuclinton/shopCart"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Github
             </a>
@@ -78,6 +82,7 @@ function WorkPage() {
               className="cta-btn"
               href="https://github.com/unegbuclinton/TaskTracker"
               target="_blank"
+              rel="noopener noreferrer"
               a
             >
               Demo
@@ -88,6 +93,7 @@ function WorkPage() {
               className="cta-btn"
               href="https://trackt.netlify.app/"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Github
             </a>
