@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { COLORS } from '../../../constants/colors';
 import { FONTSIZES, FONTWEIGHTS } from '../../../constants/fonts';
 import project from '../../../img/project.png';
+import shop from '../../../img/shop.png';
 import Button from '../../atoms/Button';
 
 function WorkPage() {
@@ -14,32 +15,82 @@ function WorkPage() {
       <WorkItemContainer>
         <div className="work-item">
           <h2 className="work-item__header">Smart-Banking</h2>
-          <div className="work-item"></div>
+          <div className="work-item__1"></div>
           <p className="work-item__description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
-            sit eveniet obcaecati incidunt voluptatem enim expedita inventore,
-            tenetur nisi laborum.
+            This is a static <span>Smart banking</span> web application built
+            using react and styled component
           </p>
           <Button className="work-item__btn" auth>
-            Demo
+            <a
+              className="cta-btn"
+              href="https://smartbank.netlify.app/"
+              target="_blank"
+            >
+              Demo
+            </a>
           </Button>
           <Button className="work-item__btn--github" auth>
-            Github
+            <a
+              className="cta-btn"
+              href="https://github.com/unegbuclinton/Web-communication"
+              target="_blank"
+            >
+              Github
+            </a>
           </Button>
         </div>
         <div className="work-item">
-          <h2 className="work-item__header">Smart-Banking</h2>
-          <div className="work-item"></div>
+          <h2 className="work-item__header">E-commerce Store</h2>
+          <div className="work-item__2"></div>
           <p className="work-item__description">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat
-            sit eveniet obcaecati incidunt voluptatem enim expedita inventore,
-            tenetur nisi laborum.
+            An <span>E-store</span> application created with react and also used
+            data froma a free API. With great functionality to add and remove
+            from cart,sum up etc
           </p>
           <Button className="work-item__btn" auth>
-            Demo
+            <a
+              className="cta-btn"
+              href="https://ccart.netlify.app/"
+              target="_blank"
+            >
+              Demo
+            </a>
           </Button>
           <Button className="work-item__btn--github" auth>
-            Github
+            <a
+              className="cta-btn"
+              href="https://github.com/unegbuclinton/shopCart"
+              target="_blank"
+            >
+              Github
+            </a>
+          </Button>
+        </div>
+        <div className="work-item">
+          <h2 className="work-item__header">Task Tracker</h2>
+          <div className="work-item__3"></div>
+          <p className="work-item__description">
+            A simple <span>Task Tracker</span> application with functionality to
+            add and remove tasks and also toogle,created using react.
+          </p>
+          <Button className="work-item__btn" auth>
+            <a
+              className="cta-btn"
+              href="https://github.com/unegbuclinton/TaskTracker"
+              target="_blank"
+              a
+            >
+              Demo
+            </a>
+          </Button>
+          <Button className="work-item__btn--github" auth>
+            <a
+              className="cta-btn"
+              href="https://trackt.netlify.app/"
+              target="_blank"
+            >
+              Github
+            </a>
           </Button>
         </div>
       </WorkItemContainer>
@@ -69,11 +120,37 @@ const WorkWrapper = styled.section`
     margin-top: 2rem;
     padding: 1.5;
 
-    .work-item {
+    .work-item__1 {
       width: 80%;
       height: 20rem;
       background-position: center;
       background-image: url(${project});
+      background-size: cover;
+      border-radius: 1rem;
+
+      &:hover {
+        transition: transform 0.3s ease-out;
+        transform: scale(0.9);
+      }
+    }
+    .work-item__2 {
+      width: 80%;
+      height: 20rem;
+      background-position: center;
+      background-image: url(${shop});
+      background-size: cover;
+      border-radius: 1rem;
+
+      &:hover {
+        transition: transform 0.3s ease-out;
+        transform: scale(0.9);
+      }
+    }
+    .work-item__3 {
+      width: 80%;
+      height: 20rem;
+      background-position: center;
+      background-image: url(${shop});
       background-size: cover;
       border-radius: 1rem;
 
@@ -113,4 +190,9 @@ const WorkWrapper = styled.section`
 const WorkItemContainer = styled.div`
   display: flex;
   flex-direction: column;
+
+  .cta-btn {
+    text-decoration: none;
+    color: ${COLORS.white};
+  }
 `;
