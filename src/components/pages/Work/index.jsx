@@ -4,6 +4,8 @@ import { COLORS } from '../../../constants/colors';
 import { FONTSIZES, FONTWEIGHTS } from '../../../constants/fonts';
 import project from '../../../img/project.png';
 import shop from '../../../img/shop.png';
+
+import Task from '../../../img/Task.png';
 import Button from '../../atoms/Button';
 
 function WorkPage() {
@@ -156,7 +158,7 @@ const WorkWrapper = styled.section`
       width: 80%;
       height: 20rem;
       background-position: center;
-      background-image: url(${shop});
+      background-image: url(${Task});
       background-size: cover;
       border-radius: 1rem;
 
