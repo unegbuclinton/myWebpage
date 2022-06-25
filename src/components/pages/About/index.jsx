@@ -21,7 +21,11 @@ function AboutPage() {
           <p data-aos="fade-down">
             I am a Frontend developer with two years experience working with,
             and learning web development technologies. I work with
+<<<<<<< HEAD
             <span> HTML, CSS, JAVASCRIPT, REACT, REDUX </span> Also comfortable
+=======
+            <span> HTML, CSS, JAVASCRIPT, REACT, sREDUX </span> Also comfortable
+>>>>>>> 9bd205eb2aa0d08e1f938bf20d942d5fed5051b1
             using <span>UI</span> technologies, like <span> FIGMA</span> and
             it's plugins.
           </p>
