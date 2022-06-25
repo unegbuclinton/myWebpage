@@ -19,10 +19,11 @@ function AboutPage() {
             Curriculum.<span>vitae( )</span>
           </div>
           <p data-aos="fade-down">
-            I have two years experience working with, and learning web
-            development technologies. Began to build using
-            <span> Html and css</span>, which brought me to the big reveal of
-            <span> javascript</span>. I am also a self taught UI designer.
+            I am a Frontend developer with two years experience working with,
+            and learning web development technologies. I work with
+            <span> HTML, CSS, JAVASCRIPT, REACT, sREDUX </span> Also comfortable
+            using <span>UI</span> technologies, like <span> FIGMA</span> and
+            it's plugins.
           </p>
         </HomeIntro>
         <div data-aos="fade-down" className="active">
@@ -217,7 +218,7 @@ const HomeWrapper = styled.div`
     font-size: ${FONTSIZES.xlarge};
     font-weight: ${FONTWEIGHTS.medium};
     color: ${COLORS['ivory']};
-    margin-bottom: 12rem;
+    margin-bottom: 5rem;
   }
 
   @media only screen and (min-width: 768px) {
