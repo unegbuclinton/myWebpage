@@ -1,4 +1,5 @@
 import { BrowserRouter as Router } from 'react-router-dom';
+import styled from 'styled-components';
 import AboutPage from './components/pages/About';
 import Contact from './components/pages/Contact';
 import HomePage from './components/pages/Home';
@@ -10,13 +11,23 @@ const App = () => {
     <>
       <Router>
         <NavHeader />
-        <HomePage />
-        <WorkPage />
-        <AboutPage />
-        <Contact />
+        <AppContainer id="home">
+          <HomePage />
+        </AppContainer>
+        <AppContainer id="work">
+          <WorkPage />
+        </AppContainer>
+        <AppContainer id="about">
+          <AboutPage />
+        </AppContainer>
+        <AppContainer id="contact">
+          <Contact />
+        </AppContainer>
       </Router>
     </>
   );
 };
 
 export default App;
+
+const AppContainer = styled.div``;

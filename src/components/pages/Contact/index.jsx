@@ -58,7 +58,6 @@ function Contact() {
             <AiOutlinePhone />
           </span>
           <div className="contact-action__details">
-            {/* <h1>Call Me</h1> */}
             <a href="tel:08030905388">08030905388</a>
           </div>
         </ContactAction>
@@ -73,7 +72,6 @@ function Contact() {
             <AiOutlineMail />
           </span>
           <div className="contact-action__details">
-            {/* <h1> Email</h1> */}
             <a href="mailto:unegbuclinton5@gmail.com">
               unegbuclinton5@gmail.com
             </a>
@@ -170,7 +168,7 @@ const ContactAction = styled.div`
   }
   a {
     font-size: ${FONTSIZES.small};
-    text-decoration: none;
+    text-decoration: underline;
     color: ${COLORS['pewter-blue']};
   }
 

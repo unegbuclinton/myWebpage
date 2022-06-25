@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
-import styled, { css } from 'styled-components';
+import { Link } from 'react-scroll';
+import styled from 'styled-components';
 import { COLORS } from '../../../constants/colors';
 import { FONTSIZES, FONTWEIGHTS } from '../../../constants/fonts';
 import img from '../../../img/logo.png';
@@ -12,9 +12,8 @@ import {
   DPIconWorks,
 } from '../../Icons';
 
-function NavHeader({ clinton, work, contact, about }) {
+function NavHeader() {
   const [navbar, setNavbar] = useState(false);
-  const [activeTab, setActiveTab] = useState(0);
 
   const ChangeNavbar = () => {
     if (window.scrollY >= 90) {
@@ -26,48 +25,44 @@ function NavHeader({ clinton, work, contact, about }) {
 
   window.addEventListener('scroll', ChangeNavbar);
 
-  // const scrollToSection = (elementRef) => {
-  //   window.scrollTo({
-  //     top: elementRef.current.offsetTop,
-  //     behavior: 'smooth',
-  //   });
-  // };
-
   const buttons = [
     {
       name: 'Clinton',
       icon: <DPIconProfile className="dpi-icon" />,
-      // onClick: () => scrollToSection(clinton),
+      to: 'home',
     },
     {
       name: 'Work',
       icon: <DPIconWorks className="dpi-icon" />,
-      // onClick: () => scrollToSection(work),
+      to: 'work',
     },
     {
       name: 'About',
       icon: <DPIconAbout className="dpi-icon" />,
-      // onClick: () => scrollToSection(about),
+      to: 'about',
     },
     {
       name: 'Contact',
       icon: <DPIconContact className="dpi-icon" />,
-      // onClick: () => scrollToSection(contact),
+      to: 'contact',
     },
   ];
 
   return (
     <NavWrapper navbar={navbar}>
       <MobileNavItems>
-        {buttons.map(({ name, icon, onClick }, index) => (
-          <MobileTab
-            key={index}
-            className="mobile-nav__btn"
-            active={activeTab === index}
-            onClick={() => setActiveTab(index)}
-          >
-            <span>{icon}</span>
-            {name}
+        {buttons.map(({ name, icon, to }, index) => (
+          <MobileTab key={index} className="mobile-nav__btn">
+            <Link
+              className="active-link"
+              activeClass="active"
+              to={to}
+              spy={true}
+              smooth={true}
+            >
+              <span>{icon}</span>
+              {name}
+            </Link>
           </MobileTab>
         ))}
       </MobileNavItems>
@@ -77,10 +72,18 @@ function NavHeader({ clinton, work, contact, about }) {
         </div>
 
         <NavMenu navbar={navbar}>
-          <Link to="/">.clinton()</Link>
-          <Link to="/work">.Works()</Link>
-          <Link to="/about">.about()</Link>
-          <Link to="/contact">.contact()</Link>
+          <Link spy={true} activeClass="active-class" smooth={true} to="home">
+            .clinton()
+          </Link>
+          <Link spy={true} activeClass="active-" smooth={true} to="work">
+            .Works()
+          </Link>
+          <Link spy={true} activeClass="active-" smooth={true} to="about">
+            .about()
+          </Link>
+          <Link spy={true} activeClass="active-" smooth={true} to="contact">
+            .contact()
+          </Link>
 
           <div className="media-icons">
             <a
@@ -152,6 +155,26 @@ const NavContainer = styled.div`
 const MobileNavItems = styled.div`
   display: flex;
 
+  .active-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .active {
+    font-weight: ${FONTWEIGHTS.bold};
+    cursor: default;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      left: 0;
+      transition: width 0.3s;
+      border-top: 3px solid ${COLORS.pink};
+    }
+  }
   @media screen and (min-width: 1100px) {
     display: none;
   }
@@ -159,11 +182,8 @@ const MobileNavItems = styled.div`
     display: none;
   }
 `;
-const MobileTab = styled.button`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+const MobileTab = styled.li`
+  list-style: none;
   position: relative;
   background: transparent;
   color: ${COLORS.ivory};
@@ -171,28 +191,6 @@ const MobileTab = styled.button`
   padding: 1.2rem;
   border: none;
   font-size: ${FONTSIZES.small};
-
-  .dpi-icon {
-    fill {
-      color: ${COLORS.white};
-    }
-  }
-  ${({ active }) =>
-    active &&
-    css`
-      font-weight: ${FONTWEIGHTS.bold};
-      
-      cursor: default;
-      &::after {
-        content: '';
-         position: absolute;
-          top: 0;
-          width: 100%;
-          left: 0;
-        transition:width 0.3s;
-        border-top 3px solid ${COLORS.pink};
-      }
-    `};
 `;
 const NavMenu = styled.div`
   display: none;
@@ -228,71 +226,3 @@ const NavMenu = styled.div`
     }
   }
 `;
-// const Hamburger = styled.div`
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-around;
-//   width: 2rem;
-//   height: 2rem;
-//   background: transparent;
-//   border: none;
-//   cursor: pointer;
-//   padding: 0;
-//   z-index: 10;
-
-//   &:focus {
-//     outline: none;
-//   }
-
-//   div {
-//     width: 2rem;
-//     height: 0.25rem;
-//     background: ${({ navbar }) =>
-//       navbar ? COLORS['dark-purple'] : COLORS.ivory};
-//     transition: all 0.3s linear;
-//     position: relative;
-//     transform-origin: 1px;
-//   }
-
-//   @media only screen and (min-width: 768px) {
-//     height: 2.2rem;
-//     display: none;
-//   }
-// `;
-
-// const StyledMenu = styled.nav`
-//   display: flex;
-//   flex-direction: column;
-//   width: 100%;
-//   align-items: center;
-//   justify-content: center;
-//   background: ${COLORS['dark-purple']};
-//   opacity: 0.95;
-//   height: 100vh;
-//   text-align: left;
-//   padding: 2rem;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   transition: transform 0.3s ease-in-out;
-//   transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(-100%)')};
-
-//   a {
-//     font-size: ${FONTSIZES.xxlarge};
-//     text-transform: uppercase;
-//     padding: 2rem 0;
-//     font-weight: bold;
-//     letter-spacing: 0.5rem;
-//     color: ${COLORS.ivory};
-//     text-decoration: none;
-//     transition: color 0.3s linear;
-
-//     &:hover {
-//       color: ${COLORS['dark-slay-gray']};
-//     }
-//   }
-//   .media-icons {
-//     display: flex;
-//     gap: 1.6rem;
-//   }
-// `;
