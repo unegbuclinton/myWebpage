@@ -193,6 +193,7 @@ const MobileTab = styled.li`
   font-size: ${FONTSIZES.small};
 `;
 const NavMenu = styled.div`
+  cursor: pointer;
   display: none;
 
   @media screen and (min-width: 1100px) {
