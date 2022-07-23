@@ -101,8 +101,13 @@ const WorkWrapper = styled.section`
     padding: 1.5;
 
     .img {
+<<<<<<< HEAD
       width: 100%;
       height: 20rem;
+=======
+      width: 80%;
+      height: 50rem;
+>>>>>>> c4e4ec006018628e82374d62cdf135572bbcdac1
       background-position: center;
       background-size: cover;
       border-radius: 1rem;
