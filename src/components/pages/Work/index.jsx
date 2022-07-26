@@ -13,7 +13,7 @@ function WorkPage() {
   const works = [
     {
       name: 'MovieBooz',
-      desc: 'MovieBooz is functional and responsive application that allows you purchase movie tickets, add payment card,edit profle,add to favourite and other interesting functionalities. Built with React, styled-component, redux-toolkit',
+      desc: 'MovieBooz is functional and responsive react application that allows you purchase movie tickets, add payment card,edit profle,add to favourite and other interesting functionalities. Also fetched its data from MovieDB endPoint With redux toolkit',
       netlifyHref: 'https://movieboomz.netlify.app/',
       githubHref: 'https://github.com/unegbuclinton/MovieApp',
       img: movie,
@@ -129,7 +129,7 @@ const WorkWrapper = styled.section`
 
     .work-item__btn {
       padding: 1rem;
-      background: ${COLORS['light-purple']};
+      background: ${COLORS.pink};
     }
     .work-item__btn--github {
       padding: 1rem;
