@@ -20,7 +20,7 @@ function WorkPage() {
     },
     {
       name: 'My WebPage',
-      desc: 'This is a simple functional application that tells you about work history,project and experience. Put together with react, styled-component and react-hooks',
+      desc: 'This is a simple functional react application that tells you about my work history,project and experience. ',
       netlifyHref: 'https://movieboomz.netlify.app/',
       githubHref: 'https://github.com/unegbuclinton/TaskTracker',
       img: myPage,
