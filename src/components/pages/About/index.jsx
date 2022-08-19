@@ -19,22 +19,22 @@ function AboutPage() {
             Curriculum.<span>vitae( )</span>
           </div>
           <p data-aos="fade-down">
-            I am a Frontend developer with two years experience working with,
+            I am a Frontend developer with three years experience working with,
             and learning web development technologies. I work with
-            <span> HTML, CSS, JAVASCRIPT, REACT, REDUX </span> Also comfortable
-            using <span>UI</span> technologies, like <span> FIGMA</span> and
-            it's plugins.
+            <span> HTML, CSS, JAVASCRIPT, REACT,NodeJs, REDUX </span> Also
+            comfortable using <span>UI</span> technologies, like{' '}
+            <span> FIGMA</span> and it's plugins.
           </p>
         </HomeIntro>
         <div data-aos="fade-down" className="active">
-          Active (2020-2022)
+          Active (2019-2022)
         </div>
         <HomeIntro>
           <p>
             Joined Zuri internship in 2021 where I learnt new web technologies,
-            <span> React, styled-components, redux toolkit </span>etc. I also
-            interned at curacel as a marketinng intern in 2020. This is me.
-            <span>( )</span>
+            brainstormed and collaborate with other solid developers to solve
+            problems and work on interesting projects. I also interned at
+            curacel as a growth engineer in 2020. This is me.
           </p>
         </HomeIntro>
       </HomeWrapper>

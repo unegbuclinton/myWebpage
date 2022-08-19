@@ -2,13 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { COLORS } from '../../../constants/colors';
 import { FONTSIZES, FONTWEIGHTS } from '../../../constants/fonts';
+import agile from '../../../img/agile.jpg';
 import movie from '../../../img/movie.jpg';
 import myPage from '../../../img/myPage.jpg';
-import project from '../../../img/project.png';
-
 import Task from '../../../img/Task.png';
 import Button from '../../atoms/Button';
-
 function WorkPage() {
   const works = [
     {
@@ -19,18 +17,11 @@ function WorkPage() {
       img: movie,
     },
     {
-      name: 'My WebPage',
-      desc: 'This is a simple functional react application that tells you about my work history,project and experience. ',
-      netlifyHref: 'https://movieboomz.netlify.app/',
-      githubHref: 'https://github.com/unegbuclinton/TaskTracker',
-      img: myPage,
-    },
-    {
-      name: 'Smart-Banking',
-      desc: 'SmartBanking is a static web application built using react and styled component',
-      netlifyHref: 'https://smartbank.netlify.app/',
-      githubHref: 'https://github.com/unegbuclinton/Web-communication',
-      img: project,
+      name: 'Project Managemement',
+      desc: 'This is a WORK IN PROGRESS Application for project management which would enable you add task and move it to it status. working for only mobile now ',
+      netlifyHref: 'https://aggile.netlify.app/',
+      githubHref: 'https://github.com/unegbuclinton/projectmanagement',
+      img: agile,
     },
     {
       name: 'Task Tracker',
@@ -38,6 +29,13 @@ function WorkPage() {
       netlifyHref: 'https://trackt.netlify.app/',
       githubHref: 'https://github.com/unegbuclinton/TaskTracker',
       img: Task,
+    },
+    {
+      name: 'My WebPage',
+      desc: 'This is a simple functional react application that tells you about my work history,project and experience. ',
+      netlifyHref: 'https://clintonunegbu.netlify.app/',
+      githubHref: 'https://github.com/unegbuclinton/myWebpage',
+      img: myPage,
     },
   ];
   return (
@@ -97,7 +95,7 @@ const WorkWrapper = styled.section`
 
   .work-item {
     width: 100%;
-    margin-top: 2rem;
+    margin: 3.5rem;
     padding: 1.5;
 
     .img {
@@ -139,7 +137,7 @@ const WorkWrapper = styled.section`
   }
 
   @media only screen and (min-width: 768px) {
-    margin: 15rem 20rem 0 calc(35rem + 1px);
+    margin: 11rem 20rem 0 calc(35rem + 1px);
     padding: 0rem 0 0;
   }
 `;
@@ -155,13 +153,13 @@ const WorkItemContainer = styled.div`
     .work-item {
       .img {
         width: 80%;
-        height: 50rem;
+        height: 30rem;
         background-position: center;
-        background-size: cover;
+        transition: all 0.3s ease-in-out;
+        object-fit: cover;
         border-radius: 1rem;
 
         &:hover {
-          transition: transform 0.3s ease-in-out;
           transform: scale(0.9);
         }
       }

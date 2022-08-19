@@ -103,12 +103,13 @@ function HomePage() {
           <div data-aos="fade-left" className="home-details">
             <p className="about-content__text">HTML /3 </p>
             <p className="about-content__text">CSS /3 </p>
-            <p className="about-content__text">JAVASCRIPT /1+ </p>
-            <p className="about-content__text"> REACT /1+ </p>
-            <p className="about-content__text"> REDUX-TOOLKIT /1+ </p>
-            <p className="about-content__text"> STYLED-COMPONENT /1+ </p>
-            <p className="about-content__text"> AXIOS /1+ </p>
-            <p className="about-content__text"> AXIOS INTERCEPTORS /1+ </p>
+            <p className="about-content__text">JAVASCRIPT /3+ </p>
+            <p className="about-content__text">NODE JS/1+</p>
+            <p className="about-content__text"> REACT /2+ </p>
+            <p className="about-content__text"> REDUX-TOOLKIT /2+ </p>
+            <p className="about-content__text"> STYLED-COMPONENT /2+ </p>
+            <p className="about-content__text">GIT/2+</p>
+            <p className="about-content__text"> Tailwind CSS /1+ </p>
             <p className="about-content__text"> FIGMA /1+ </p>
           </div>
 
@@ -133,6 +134,7 @@ function HomePage() {
             Also Busy With
           </h1>
           <div className="home-details">
+            <p className="about-content__text"> Solving Code Challenges</p>
             <p className="about-content__text"> Playing Chess</p>
             <p className="about-content__text">Watching Movies</p>
             <p className="about-content__text">Video games</p>
