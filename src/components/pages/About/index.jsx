@@ -32,7 +32,7 @@ function AboutPage() {
         <HomeIntro>
           <p>
             Joined Zuri internship in 2021 where I learnt new web technologies,
-            brainstormed and collaborate with other solid developers to solve
+            brainstormed and collaborated with other solid developers to solve
             problems and work on interesting projects. I also interned at
             curacel as a growth engineer in 2020. This is me.
           </p>
