@@ -95,7 +95,7 @@ const WorkWrapper = styled.section`
 
   .work-item {
     width: 100%;
-    margin: 3.5rem;
+    margin: 3.5rem 0;
     padding: 1.5;
 
     .img {
@@ -105,9 +105,9 @@ const WorkWrapper = styled.section`
       background-position: center;
       background-size: cover;
       border-radius: 1rem;
+      transition: all 0.3s ease-in-out;
 
       &:hover {
-        transition: transform 0.3s ease-in-out;
         transform: scale(0.9);
       }
     }
