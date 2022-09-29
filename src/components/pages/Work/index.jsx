@@ -11,19 +11,20 @@ import Button from '../../atoms/Button';
 function WorkPage() {
   const works = [
     {
-      name: 'MovieBooz',
-      desc: 'MovieBooz is functional and responsive react application that allows you purchase movie tickets, add payment card,edit profle,add to favourite and other interesting functionalities. Also fetched its data from MovieDB EndPoint With redux toolkit',
-      netlifyHref: 'https://movieboomz.netlify.app/',
-      githubHref: 'https://github.com/unegbuclinton/MovieApp',
-      img: movie,
-    },
-    {
       name: 'E-store',
       desc: 'E-store is a an e-commerce application built using FakeApi for getting random products. The aplication allows us to shop for products, add them to cart for immediate buy or wish-list for future purchase and other interesting functionalities',
       netlifyHref: 'https://e-cstore.netlify.app/',
       githubHref: 'https://github.com/unegbuclinton/ecommerce',
       img: cart,
     },
+    {
+      name: 'MovieBooz',
+      desc: 'MovieBooz is functional and responsive react application that allows you purchase movie tickets, add payment card,edit profle,add to favourite and other interesting functionalities. Also fetched its data from MovieDB EndPoint With redux toolkit',
+      netlifyHref: 'https://movieboomz.netlify.app/',
+      githubHref: 'https://github.com/unegbuclinton/MovieApp',
+      img: movie,
+    },
+
     {
       name: 'Project Managemement',
       desc: 'This is a WORK IN PROGRESS Application for project management which would enable you add task and move it to it status. working for only mobile now ',
