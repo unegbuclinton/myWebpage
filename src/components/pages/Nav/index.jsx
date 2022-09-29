@@ -87,7 +87,7 @@ function NavHeader() {
 
           <div className="media-icons">
             <a
-              href="http://linkedin.com/in/unegbu-clinton-062b181b3"
+              href="https://linkedin.com/in/clinton-unegbu/"
               rel="noreferrer noopener"
               target="_blank"
               className="media-icon"
@@ -196,6 +196,36 @@ const NavMenu = styled.div`
   cursor: pointer;
   display: none;
 
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    z-index: 10;
+    margin-top: -1.5rem;
+
+    a {
+      font-size: ${FONTSIZES.xsmall};
+      text-transform: uppercase;
+      padding: 2rem 0;
+      font-weight: bold;
+      letter-spacing: 0.5rem;
+      color: ${({ navbar }) => (navbar ? COLORS['dark-purple'] : COLORS.ivory)};
+      text-decoration: none;
+      transition: color 0.3s linear;
+
+      &:hover {
+        color: ${COLORS['dark-slay-gray']};
+      }
+    }
+    .media-icons {
+      display: flex;
+      gap: 1.6rem;
+      margin-top: 0.5rem;
+      .media-icon {
+        font-size: ${FONTSIZES.small};
+      }
+    }
+  }
   @media screen and (min-width: 1100px) {
     display: flex;
     align-items: center;

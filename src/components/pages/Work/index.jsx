@@ -146,7 +146,7 @@ const WorkWrapper = styled.section`
   }
 
   @media only screen and (min-width: 768px) {
-    margin: 11rem 20rem 0 calc(35rem + 1px);
+    margin: 11rem 20rem 0 calc(6rem + 1px);
     padding: 0rem 0 0;
   }
 `;
@@ -161,7 +161,7 @@ const WorkItemContainer = styled.div`
   @media only screen and (min-width: 768px) {
     .work-item {
       .img {
-        width: 80%;
+        width: 100%;
         height: 30rem;
         background-position: center;
         transition: all 0.3s ease-in-out;

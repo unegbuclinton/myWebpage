@@ -153,14 +153,14 @@ const HomeWrapper = styled.div`
   }
 
   @media only screen and (min-width: 768px) {
-    padding: 50.4rem 0 0;
+    padding: 12.4rem 0 0;
     overflow: hidden;
     &::before {
       content: '';
       width: 100%;
       height: 80vh;
       position: absolute;
-      top: -127px;
+      top: 1px;
       z-index: -3;
       background-repeat: no-repeat;
       background-position: 50%;
