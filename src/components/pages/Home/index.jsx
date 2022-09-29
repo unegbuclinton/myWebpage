@@ -16,24 +16,10 @@ function HomePage() {
   return (
     <HomeWrapper>
       <HomeSection>
-        {/* <div data-aos="fade-up" className="about-header">
-          Clinton.<span>me( )</span>
-        </div> */}
         <div className="home-header">
           <h2 ata-aos="fade-up" className="secondary-text">
             Unegbu Clinton Chigozie
           </h2>
-          {/* <div className="text-wrapper">
-            <div className="static"> I am a </div>
-            <ul className="dynamic">
-              <li>
-                <span> Developer</span>
-              </li>
-              <li>
-                <span> Designer</span>
-              </li>
-            </ul>
-          </div> */}
         </div>
         <p data-aos="fade-down" className="description">
           I am a creative frontend developer,with intensive knowledge of web
