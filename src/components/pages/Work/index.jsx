@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { COLORS } from '../../../constants/colors';
 import { FONTSIZES, FONTWEIGHTS } from '../../../constants/fonts';
 import agile from '../../../img/agile.jpg';
+import cart from '../../../img/cart.png';
 import movie from '../../../img/movie.jpg';
 import myPage from '../../../img/myPage.jpg';
 import Task from '../../../img/Task.png';
@@ -11,10 +12,17 @@ function WorkPage() {
   const works = [
     {
       name: 'MovieBooz',
-      desc: 'MovieBooz is functional and responsive react application that allows you purchase movie tickets, add payment card,edit profle,add to favourite and other interesting functionalities. Also fetched its data from MovieDB endPoint With redux toolkit',
+      desc: 'MovieBooz is functional and responsive react application that allows you purchase movie tickets, add payment card,edit profle,add to favourite and other interesting functionalities. Also fetched its data from MovieDB EndPoint With redux toolkit',
       netlifyHref: 'https://movieboomz.netlify.app/',
       githubHref: 'https://github.com/unegbuclinton/MovieApp',
       img: movie,
+    },
+    {
+      name: 'E-store',
+      desc: 'E-store is a an e-commerce application built using FakeApi for getting random products. The aplication allows us to shop for products, add them to cart for immediate buy or wish-list for future purchase and other interesting functionalities',
+      netlifyHref: 'https://e-cstore.netlify.app/',
+      githubHref: 'https://github.com/unegbuclinton/ecommerce',
+      img: cart,
     },
     {
       name: 'Project Managemement',
