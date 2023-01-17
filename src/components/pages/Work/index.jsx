@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { COLORS } from '../../../constants/colors';
 import { FONTSIZES, FONTWEIGHTS } from '../../../constants/fonts';
 import agile from '../../../img/agile.jpg';
+import biggorilla from '../../../img/biggorilla.png';
 import cart from '../../../img/cart.png';
 import movie from '../../../img/movie.jpg';
 import myPage from '../../../img/myPage.jpg';
@@ -10,6 +11,12 @@ import Task from '../../../img/Task.png';
 import Button from '../../atoms/Button';
 function WorkPage() {
   const works = [
+    {
+      name: 'Biggorrillapps',
+      desc: 'This is a live site of a digital agency webpage for online exposure built using react and other modern frontend technologies ',
+      netlifyHref: 'https://www.biggorillaapps.com/',
+      img: biggorilla,
+    },
     {
       name: 'E-store',
       desc: 'E-store is a an e-commerce application built using FakeApi for getting random products. The aplication allows us to shop for products, add them to cart for immediate buy or wish-list for future purchase and other interesting functionalities',
@@ -128,7 +135,7 @@ const WorkWrapper = styled.section`
     }
 
     .work-item__description {
-      max-width: 80%;
+      /* max-width: 80%; */
       font-size: ${FONTSIZES.small};
       color: ${COLORS['pewter-blue']};
       margin: 1rem 0;
